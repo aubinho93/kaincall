@@ -1,0 +1,200 @@
+.form-group {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.form-inline > .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.form-group input {
+  height: 1.9rem;
+}
+
+.form-group .control-label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #999;
+  display: block;
+}
+.form-group .bar::before {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: rgb(0, 188, 212);
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+.form-group input{
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+.form-group input[type="file"] {
+  line-height: 1;
+}
+.form-group input[type="file"] ~ .bar {
+  display: none;
+}
+
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #444444;
+}
+
+.form-group input:focus ~ .control-label,
+.form-group input:valid ~ .control-label,
+.form-group input.form-file ~ .control-label,
+.form-group input.has-value ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.form-group textarea:valid ~ .control-label,
+.form-group textarea.form-file ~ .control-label,
+.form-group textarea.has-value ~ .control-label {
+  font-size: 0.8rem;
+  color: gray;
+  top: -1rem;
+  left: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+
+.form-group input:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label {
+  color: rgb(0, 188, 212);
+}
+
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+.iconParam{
+  display:inline-block;
+  right: 10px;
+  top:10px;
+  position: absolute;
+  font-size: 1.5em;
+}
+
+.iconParam a {
+  color : gray;
+}
+
+.iconParam a :hover{
+  color:black;
+  }
+  
+  .k{
+    font-size :1.2em;
+  }
+  /*pour la flèche*/
+ .fa
+ {
+ font-size:1.0em;
+ font-weight: lighter;
+ }
+ 
+.loginClick{
+    width: 80px;
+    height: 80px;
+}
+
+/*S'applique lorsque la flèche est activé suite à une saisi dans le champ Votre Nom*/
+.submit-bouton{
+    width:100%;
+	height:100%;
+	background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEwLDUwMGMwLDI3MC42LDIxOS40LDQ5MCw0OTAsNDkwczQ5MC0yMTkuNCw0OTAtNDkwYzAtMjcwLjctMjE5LjQtNDkwLTQ5MC00OTBTMTAsMjI5LjMsMTAsNTAweiBNNzEuMyw1MDBjMC0yMzYuOCwxOTItNDI4LjgsNDI4LjgtNDI4LjhjMjM2LjksMCw0MjguOCwxOTIsNDI4LjgsNDI4LjhjMCwyMzYuNy0xOTEuOSw0MjguOC00MjguOCw0MjguOEMyNjMuMyw5MjguOCw3MS4zLDczNi43LDcxLjMsNTAweiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMTEsNDU0LjFoNDkwdjkxLjlIMjExVjQ1NC4xeiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NTIuMiwyODUuNmgxMjIuNWwyMTQuNCwyMTlMNTc0LjcsNzE0LjRINDUyLjJsMjE0LjQtMjA5LjhMNDUyLjIsMjg1LjZ6Ii8+PC9nPg0KPC9zdmc+DQo=");
+	background-position:center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:90%;
+	cursor:pointer;
+	-webkit-transition-property:opacity -webkit-transform;
+	-moz-transition-property:opacity -moz-transform;
+	-o-transition-property:opacity -o-transform;
+	-ms-transition-property:opacity -ms-transform;
+	transition-property:opacity transform;
+	-webkit-transition-duration:.5s;
+	-moz-transition-duration:.5s;
+	-o-transition-duration:.5s;
+	-ms-transition-duration:.5s;
+	transition-duration:.5s;
+}
+
+/*S'applique lorsque rien n'est saisi dans le champ*/
+.submit-bouton-disable{
+    width:100%;
+	height:100%;
+    background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEwLDUwMGMwLDI3MC42LDIxOS40LDQ5MCw0OTAsNDkwczQ5MC0yMTkuNCw0OTAtNDkwYzAtMjcwLjctMjE5LjQtNDkwLTQ5MC00OTBTMTAsMjI5LjMsMTAsNTAweiBNNzEuMyw1MDBjMC0yMzYuOCwxOTItNDI4LjgsNDI4LjgtNDI4LjhjMjM2LjksMCw0MjguOCwxOTIsNDI4LjgsNDI4LjhjMCwyMzYuNy0xOTEuOSw0MjguOC00MjguOCw0MjguOEMyNjMuMyw5MjguOCw3MS4zLDczNi43LDcxLjMsNTAweiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMTEsNDU0LjFoNDkwdjkxLjlIMjExVjQ1NC4xeiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NTIuMiwyODUuNmgxMjIuNWwyMTQuNCwyMTlMNTc0LjcsNzE0LjRINDUyLjJsMjE0LjQtMjA5LjhMNDUyLjIsMjg1LjZ6Ii8+PC9nPg0KPC9zdmc+DQo=");
+	background-position:center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:90%;
+    opacity:.25;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	filter:alpha(opacity=25);
+	pointer-events:none
+}
+
+/*Pour faire un effet de zoom lorsqu'on veux valider la saisi du champ*/
+.submit-bouton:hover{
+    opacity:.9;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter:alpha(opacity=90);
+	-webkit-transform:rotateZ(360deg);
+	-moz-transform:rotateZ(360deg);
+	-o-transform:rotateZ(360deg);
+	-ms-transform:rotateZ(360deg);
+	transform:rotateZ(360deg);
+	-webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	transform:scale(1.2);
+}
+

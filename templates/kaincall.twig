@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>KainCall Sip Client</title>
+{#  <link rel="stylesheet" type="text/CSS" href="style.css" />#}
+  <link rel="stylesheet" href="static/css/kaincall.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    
+    <div id="affichAppel">
+            <div class="card">
+                <div class="header">
+                    <div class="animation">
+                        <span class="icon ring"></span>
+                        <div class="cercle one"></div>
+                        <div class="cercle two"></div>
+                        <div class="cercle three"></div>
+                    </div>
+
+                    <p class="sipURI"></p>
+                    <p class="calling"></p>
+                </div>
+
+                <div class="footer">
+                    <div class="bouton raccrocher">
+                        <span class="icon red" id="hangDown"></span>
+                    </div>
+                    <div class="bouton decrocher">
+                        <span class="icon green" id="hangUp"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+  <div class="wrapper">
+    <div class="container">
+      <div class="left">
+        <div class="top">
+          <input type="text" class="lookingFor" />
+          <a class="button" href='#'><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+        </div>
+
+        <ul class="people">
+         {% for user in contact %}
+            <li class="person" data-chat="{{user.pseudo}}">
+            <img src="https://camo.githubusercontent.com/341831200626efe3e0cf83317801fcac2200fbe2/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f323639323831302f323130343036312f34643839316563302d386637362d313165332d393230322d6637333934306431306632302e706e67" alt="" style="border-radius:15px;" />
+            <span class="name">{{user.pseudo}}</span>
+            <span class="preview">I was wondeiing...</span>
+          </li>
+        {% endfor %}
+    
+        <li class="person" data-chat="person1">
+            <img src="http://s13.postimg.org/ih41k9tqr/img1.jpg" alt="" />
+            <span class="name">Thomas Bangalter</span>
+            <span class="preview">I was wondering...</span>
+          </li>
+          <li class="person" data-chat="person2">
+            <img src="http://s3.postimg.org/yf86x7z1r/img2.jpg" alt="" />
+            <span class="name">Dog Woofson</span>
+            <span class="time">1:44 PM</span>
+            <span class="preview">I've forgotten how it felt before</span>
+          </li>
+          <li class="person" data-chat="person3">
+            <img src="http://s3.postimg.org/h9q4sm433/img3.jpg" alt="" />
+            <span class="name">Louis CK</span>
+            <span class="time">2:09 PM</span>
+            <span class="preview">But we’re probably gonna need a new carpet.</span>
+          </li>
+          <li class="person" data-chat="person4">
+            <img src="http://s3.postimg.org/quect8isv/img4.jpg" alt="" />
+            <span class="name">Bo Jackson</span>
+            <span class="time">2:09 PM</span>
+            <span class="preview">It’s not that bad...</span>
+          </li>
+          <li class="person" data-chat="person5">
+            <img src="http://s16.postimg.org/ete1l89z5/img5.jpg" alt="" />
+            <span class="name">Michael Jordan</span>
+            <span class="time">2:09 PM</span>
+            <span class="preview">Wasup for the third time like is 
+you bling bitch</span>
+          </li>
+          <li class="person" data-chat="person6">
+            <img src="http://s30.postimg.org/kwi7e42rh/img6.jpg" alt="" />
+            <span class="name">Drake</span>
+            <span class="time">2:09 PM</span>
+            <span class="preview">howdoyoudoaspace</span>
+          </li>
+          <li class='person' data-chat="aubinho">
+                    <span class="name">Aubinho</span>
+            <span class="preview">nvjvnpfhvjifhviufvhji</span>
+          </li>
+          <li class='person' data-chat="Aubinhonjk">
+            <span class="name">Aubinho</span>
+            <span class="preview">nvjvnpfhvjifhviufvhji</span>
+          </li>
+
+        </ul>
+        
+      </div>
+      <div class="right">
+       
+        <div class="top"><span>Contact :  <span class="name">Dog Woofson</span></span>
+         
+          <a class="remove">
+	       {# <span>remove</span>#}
+         	<div class="icon">
+	       	  <i class="fa fa-remove"></i>
+        	</div>
+      </a>
+      
+        </div>
+        
+       
+                  <div id='renduVideo'>
+                    <audio id='sonArrierePlan' src="static/sound/ring.mp3" loop></audio>
+                    <audio id="sonInvitation" src='static/sound/outgoing.mp3' loop></audio>
+                    <video id="localRender" muted='muted'></video>
+                    <video id="remoteRender"></video>
+                    
+                  
+        <div class="call-back1">
+                  <div class="call-input1">
+            <input type="tel" />
+          </div>
+          <button class="call-button1">
+		<i class="fa fa-phone"></i>
+	</button>
+        </div>
+
+                    
+                   
+           </div>
+        
+         {% for user in contact %}
+           <div class ="chat" data-chat="{{user.pseudo}}">
+              <div class="portfoliocard">
+                <div class="coverphoto"></div>
+                <div class="profile_picture"></div>
+                <div class="left_col">
+                  <div class="followers">
+                  <div class="follow_count">18,541</div>
+                  Followers
+                </div>
+                <div class="following">
+                <div class="follow_count">181</div>
+                  Following
+                </div>
+              </div>
+              
+              
+              <div class="right_col">
+                  
+                <h2 class="name">{{user.pseudo}}Aubinho</h2>
+                <h3 class="location">{{user.sip}}</h3>
+                <ul class="contact_information">
+                  <li class="work">{{user.dureCall}}</li>
+                  <li class="website">{{user.siteWeb}}</a></li>
+                  <li class="mail">{{user.email}}</li>
+                  <li class="phone">{{user.tel}}</li>
+                  <li class="resume"><a href="#" class="nostyle">son Cv</a></li>
+                </ul>
+            </div>
+          </div>
+         </div>
+        {% endfor %}
+        
+        
+
+        
+        <div class="chat" data-chat="person1">
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="chat" data-chat="person2">
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="chat" data-chat="person3">
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat" data-chat="person4">
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="chat" data-chat="person5">
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="chat" data-chat="person6">
+
+
+
+          <!--display contact--->
+          <div class="portfoliocard">
+            <div class="coverphoto"></div>
+            <div class="profile_picture"></div>
+            <div class="left_col">
+              <div class="followers">
+                <div class="follow_count">18,541</div>
+                Followers
+              </div>
+              <div class="following">
+                <div class="follow_count">181</div>
+                Following
+              </div>
+            </div>
+            <div class="right_col">
+              <h2 class="name">John Doe</h2>
+              <h3 class="location">San Francisco, CA</h3>
+              <ul class="contact_information">
+                <li class="work">CEO</li>
+                <li class="website"><a class="nostyle" href="#">www.apple.com</a></li>
+                <li class="mail">john.doe@apple.com</li>
+                <li class="phone">1-(732)-757-2923</li>
+                <li class="resume"><a href="#" class="nostyle">download resume</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--end displaying contact-->
+
+{#
+        <div class="chat" data-chat="aubinho">
+          <div class="bubble you">
+            So, how's your new phone?
+          </div>
+          <div class="bubble you">
+            You finally have a smartphone :D
+          </div>
+          <div class="bubble me">
+            Drake?
+          </div>
+          <div class="bubble me">
+            Why aren't you answering?
+          </div>
+          <div class="bubble you">
+            howdoyoudoaspace
+          </div>
+        </div>#}
+    
+       
+        <div class="call-back">
+         
+      
+          <div class="call-input">
+            <input type="tel" placeholder="+7 (999) 123-45-67" />
+          </div>
+          <button id="call" class="call-button">
+		<i class="fa fa-phone"></i>
+	</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <h2>Nouveau Contact</h2>
+      <a class="close" href="#popup1">&times;</a>
+      <div class="content">
+
+
+            <form class="form">
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.5s">
+                <input type="text" class="form__input" id="entreprise" name="entreprise" required>
+                <label class="form__label" for="entreprise">
+						<span class="form__label-content">Entreprise</span>
+					</label>
+              </div>
+
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="text" class="form__input lookingFor" id="nom" name="nom" required>
+                <label class="form__label" for="nom">
+						<span class="form__label-content">Nom</span>
+					</label>
+              </div>
+
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="text" class="form__input" id="web" name="web" required>
+                <label class="form__label" for="web">
+						<span class="form__label-content">Site Web</span>
+					</label>
+              </div>
+
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="text" class="form__input" id="email" name="email" required>
+                <label class="form__label" for="email">
+						<span class="form__label-content">Email</span>
+					</label>
+              </div>
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="number" class="form__input" id="telephone" name="telephone" required>
+                <label class="form__label" for="telephone">
+						<span class="form__label-content">Telephone</span>
+					</label>
+              </div>
+
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="text" class="form__input" id="sip" name="sip" required>
+                <label class="form__label" for="sip">
+						<span class="form__label-content">Adresse SIP</span>
+					</label>
+              </div>
+
+
+              <div class="form__wrapper wow fadeInDown" data-wow-delay="0.6s">
+                <input type="file" class="form__input" id="picture" name="picture" textr="Photo ici">
+                <label class="form__label" for="picture">
+						<span class="form__label-content">Photo</span>
+					</label>
+              </div>
+
+
+              <div class="form__wrapper--submit wow fadeInLeft" data-wow-delay="0.7s">
+                <div class="form__input-submit">
+                  <button type="submit" id="submitContact" class="btn btn-block">Submit</button>
+                </div>
+              </div>
+            </form>
+         </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/onsip/SIP.js/0.7.5/dist/sip-0.7.5.js"></script>
+  <script type="text/javascript" src="static/js/kaincall.js"></script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+html, body, div, span,h1, form, label,input{
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    padding: 0;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    border: 0;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: -moz-use-text-color;
+        border-right-color: -moz-use-text-color;
+        border-bottom-color: -moz-use-text-color;
+        border-left-color: -moz-use-text-color;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image-source: none;
+        border-image-slice: 100% 100% 100% 100%;
+        border-image-width: 1 1 1 1;
+        border-image-outset: 0 0 0 0;
+        border-image-repeat: stretch stretch;
+    outline: 0;
+        outline-width: 0px;
+        outline-style: none;
+        outline-color: -moz-use-text-color;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+#container{
+    height: 100%;
+    width: 100%;
+}
+/*Inherit from body*/
+body {
+    line-height: 1;
+    color: #000;
+    background-color:#444444;
+}
+/*Inherit from html*/
+html {
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+/*div data-component permettant de centrer tous son contenu*/
+#container [data-component="Login"] {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+        -moz-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+        justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+        -moz-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+        align-items: center;
+    align-items: center;
+    will-change: opacity;
+}
+/*Pour laisser une marge en haut et en bas en fonction du texte*/
+#container [data-component="Login"] > .logo-container {
+    margin: 20px auto;
+        margin-top: 90px;
+        margin-right: auto;
+        margin-bottom: 10px;
+        margin-left: auto;
+}
+/*Pour agrandir la taille des caractères*/
+#container .logo{
+    font-size: 4rem;
+   }
+/*Pour la coloration et la police de h1*/
+#container .logo > h1 {
+    font-family: 'Poiret One';
+    font-weight: bold;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgba(255,255,255,0.85);/*couleur blanc*/
+    cursor:pointer;
+}
+/*Pour la coloration de Kain*/
+#container .texBleu{
+    color:#0AD5E3;
+    font-family: 'Indie Flower', cursive;
+  letter-spacing:-0.05em;
+ font-weight: lighter;
+ font-size:1.1em;
+}
+
+.texBlanc{
+    font-family: 'Abel', sans-serif;
+    letter-spacing: -0.1em;
+    font-weight: lighter;
+    
+    
+}
+/*Formulaire*/
+#container [data-component="Login"] > form {
+    position: relative;
+    -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+    -moz-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 0 0 auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    min-height: 200px;
+    width: 300px;
+    margin: 50px auto;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-left: auto;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.9);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.9);
+    padding: 30px;
+        padding-top: 0px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+        -moz-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+        justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+        -moz-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+        align-items: center;
+    align-items: center;
+}
+/*Pour l'icone du paramètre*/
+container [data-component="Login"] > form > .setting-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#container .setting-icon {
+    display: inline-block;
+    /*color: rgba(0, 0, 0, 0.87);
+    fill: rgb(102, 102, 102);
+    height: 24px;
+    width: 24px;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        transition-property: all;
+        transition-duration: 450ms;
+        transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        transition-delay: 0ms;
+    -moz-user-select: none;*/
+}
+
+#container .labelInput{
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    height: 72px;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    font-family: Roboto,sans-serif;
+    transition: height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        /*transition-property: height;
+        transition-duration: 200ms;
+        transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        transition-delay: 0ms;*/
+    cursor: auto;
+}
+/*Pour faire confondre le label Votre Nom avec le conteneur du formulaire*/
+/*Position normal*/
+#container .label{
+    position: absolute;
+    line-height: 22px;
+    top: 38px;
+    z-index: 0;
+    color: rgba(0, 0, 0, 0.3);
+    transform: scale(1) translate(0px, 0px);
+}
+/*Pour faire monter Votre Nom lors du clic dans le champ*/
+#container .labelClik{
+    position: absolute;
+    line-height: 22px;
+    top: 38px;
+    z-index: 1;
+    color: rgb(0, 188, 212);
+    transform: scale(0.75) translate(0px, -28px);
+}
+/**/
+#container .labelInput input{
+    padding: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+position: relative;
+width: 100%;
+border: medium none;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-top-color: -moz-use-text-color;
+    border-right-color: -moz-use-text-color;
+    border-bottom-color: -moz-use-text-color;
+    border-left-color: -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image-source: none;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-width: 1 1 1 1;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+outline: medium none;
+    outline-width: medium;
+    outline-style: none;
+    outline-color: -moz-use-text-color;
+background-color: transparent;
+color: rgba(0, 0, 0, 0.87);
+cursor: inherit;
+font: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-size-adjust: inherit;
+    font-stretch: inherit;
+    -x-system-font: none;
+    font-feature-settings: inherit;
+    font-language-override: inherit;
+    font-kerning: inherit;
+    font-synthesis: inherit;
+    font-variant-alternates: inherit;
+    font-variant-caps: inherit;
+    font-variant-east-asian: inherit;
+    font-variant-ligatures: inherit;
+    font-variant-numeric: inherit;
+    font-variant-position: inherit;
+height: 100%;
+box-sizing: border-box;
+margin-top: 14px;
+-moz-appearance: textfield;
+}
+/*Trait du bas*/
+#container .hr1{
+    border-width: medium medium 1px;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: 1px;
+    border-left-width: medium;
+border-style: none none solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+border-color: rgb(158, 158, 158);
+    border-top-color: rgb(158, 158, 158);
+    border-right-color: rgb(158, 158, 158);
+    border-bottom-color: rgb(158, 158, 158);
+    border-left-color: rgb(158, 158, 158);
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+    border-image-source: none;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-width: 1 1 1 1;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+bottom: 8px;
+box-sizing: content-box;
+margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+position: absolute;
+width: 100%;
+}
+/*Trait du bas*/
+/*Pour montrer le deuxième .hr2*/
+#container .hr2{
+    border-width: medium medium 2px;
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: 2px;
+    border-left-width: medium;
+border-style: none none solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-left-style: none;
+border-color: rgb(0, 188, 212);
+    border-top-color: rgb(0, 188, 212);
+    border-right-color: rgb(0, 188, 212);
+    border-bottom-color: rgb(0, 188, 212);
+    border-left-color: rgb(0, 188, 212);
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+    border-image-source: none;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-width: 1 1 1 1;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+bottom: 8px;
+box-sizing: content-box;
+margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    /*transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    transition-delay: 0ms;*/
+}
+/*Pour le design du bouton reset*/
+#container button{
+    border: 10px none;
+box-sizing: border-box;
+display: table;
+font-family: Roboto,sans-serif;
+cursor: pointer;
+text-decoration: none;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+margin: 20px auto 0px;
+padding: 0px;
+outline: medium none;
+    outline-width: medium;
+    outline-style: none;
+    outline-color: -moz-use-text-color;
+font-size: inherit;
+font-weight: inherit;
+transform: translate(0px, 0px);
+height: 36px;
+line-height: 36px;
+min-width: 88px;
+color: rgb(0, 188, 212);
+transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+border-radius: 2px;
+position: relative;
+overflow: hidden;
+background-color: transparent;
+
+text-align: center;
+-moz-user-select: none;
+}
+
+#container .form-container button:hover{
+    background-color: rgba(153, 153 , 153,0.2);
+}
+
+#container .submit{
+    width: 80px;
+    height: 80px;
+}
+
+/*S'applique lorsque la flèche est activé suite à une saisi dans le champ Votre Nom*/
+#container .submit-bouton{
+    width:100%;
+	height:100%;
+	background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEwLDUwMGMwLDI3MC42LDIxOS40LDQ5MCw0OTAsNDkwczQ5MC0yMTkuNCw0OTAtNDkwYzAtMjcwLjctMjE5LjQtNDkwLTQ5MC00OTBTMTAsMjI5LjMsMTAsNTAweiBNNzEuMyw1MDBjMC0yMzYuOCwxOTItNDI4LjgsNDI4LjgtNDI4LjhjMjM2LjksMCw0MjguOCwxOTIsNDI4LjgsNDI4LjhjMCwyMzYuNy0xOTEuOSw0MjguOC00MjguOCw0MjguOEMyNjMuMyw5MjguOCw3MS4zLDczNi43LDcxLjMsNTAweiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMTEsNDU0LjFoNDkwdjkxLjlIMjExVjQ1NC4xeiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NTIuMiwyODUuNmgxMjIuNWwyMTQuNCwyMTlMNTc0LjcsNzE0LjRINDUyLjJsMjE0LjQtMjA5LjhMNDUyLjIsMjg1LjZ6Ii8+PC9nPg0KPC9zdmc+DQo=");
+	background-position:center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:90%;
+	cursor:pointer;
+	-webkit-transition-property:opacity -webkit-transform;
+	-moz-transition-property:opacity -moz-transform;
+	-o-transition-property:opacity -o-transform;
+	-ms-transition-property:opacity -ms-transform;
+	transition-property:opacity transform;
+	-webkit-transition-duration:.5s;
+	-moz-transition-duration:.5s;
+	-o-transition-duration:.5s;
+	-ms-transition-duration:.5s;
+	transition-duration:.5s;
+}
+
+/*S'applique lorsque rien n'est saisi dans le champ*/
+#container .submit-bouton-disable{
+    width:100%;
+	height:100%;
+    background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEwLDUwMGMwLDI3MC42LDIxOS40LDQ5MCw0OTAsNDkwczQ5MC0yMTkuNCw0OTAtNDkwYzAtMjcwLjctMjE5LjQtNDkwLTQ5MC00OTBTMTAsMjI5LjMsMTAsNTAweiBNNzEuMyw1MDBjMC0yMzYuOCwxOTItNDI4LjgsNDI4LjgtNDI4LjhjMjM2LjksMCw0MjguOCwxOTIsNDI4LjgsNDI4LjhjMCwyMzYuNy0xOTEuOSw0MjguOC00MjguOCw0MjguOEMyNjMuMyw5MjguOCw3MS4zLDczNi43LDcxLjMsNTAweiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMTEsNDU0LjFoNDkwdjkxLjlIMjExVjQ1NC4xeiIvPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik00NTIuMiwyODUuNmgxMjIuNWwyMTQuNCwyMTlMNTc0LjcsNzE0LjRINDUyLjJsMjE0LjQtMjA5LjhMNDUyLjIsMjg1LjZ6Ii8+PC9nPg0KPC9zdmc+DQo=");
+	background-position:center;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:90%;
+    opacity:.25;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+	filter:alpha(opacity=25);
+	pointer-events:none
+}
+
+/*Pour faire un effet de zoom lorsqu'on veux valider la saisi du champ*/
+#container .submit-bouton:hover{
+    opacity:.9;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter:alpha(opacity=90);
+	-webkit-transform:rotateZ(360deg);
+	-moz-transform:rotateZ(360deg);
+	-o-transform:rotateZ(360deg);
+	-ms-transform:rotateZ(360deg);
+	transform:rotateZ(360deg);
+	-webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	transform:scale(1.2);
+}
+
+#broke{
+    top : 20px;
+    display: none;
+    color : orange;
+    font-size : 18px;
+}
